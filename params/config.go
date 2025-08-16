@@ -102,7 +102,7 @@ var (
 	}
 
 	// CygnusChainConfig defines the chain parameters for the Cygnus network.
-	var CygnusChainConfig = &ChainConfig{
+	CygnusChainConfig = &ChainConfig{
 		ChainID:             big.NewInt(235), // unique ID for Cygnus
 		HomesteadBlock:      big.NewInt(0),
 		EIP150Block:         big.NewInt(0),

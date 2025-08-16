@@ -24,17 +24,17 @@ import (
 	"math/big"
 	"strconv"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/hexutil"
+	"github.com/cygnus-chain/core/common/math"
+	"github.com/cygnus-chain/core/consensus/misc"
+	"github.com/cygnus-chain/core/core/state"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/eth/filters"
+	"github.com/cygnus-chain/core/internal/ethapi"
+	"github.com/cygnus-chain/core/rlp"
+	"github.com/cygnus-chain/core/rpc"
 )
 
 var (

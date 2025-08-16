@@ -6,13 +6,13 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
-	"github.com/ethereum/go-ethereum/miner"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/consensus/ethash"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/eth/downloader"
+	"github.com/cygnus-chain/core/eth/gasprice"
+	"github.com/cygnus-chain/core/miner"
+	"github.com/cygnus-chain/core/params"
 )
 
 // MarshalTOML marshals as TOML.

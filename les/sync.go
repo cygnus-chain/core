@@ -21,12 +21,12 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/les/downloader"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core/rawdb"
+	"github.com/cygnus-chain/core/les/downloader"
+	"github.com/cygnus-chain/core/light"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/params"
 )
 
 var errInvalidCheckpoint = errors.New("invalid advertised checkpoint")

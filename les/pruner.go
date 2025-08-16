@@ -20,10 +20,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/cygnus-chain/core/common/math"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/ethdb"
+	"github.com/cygnus-chain/core/log"
 )
 
 // pruner is responsible for pruning historical light chain data.

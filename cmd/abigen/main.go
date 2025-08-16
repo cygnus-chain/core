@@ -24,12 +24,12 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common/compiler"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/cygnus-chain/core/accounts/abi/bind"
+	"github.com/cygnus-chain/core/cmd/utils"
+	"github.com/cygnus-chain/core/common/compiler"
+	"github.com/cygnus-chain/core/crypto"
+	"github.com/cygnus-chain/core/internal/flags"
+	"github.com/cygnus-chain/core/log"
 	"github.com/urfave/cli/v2"
 )
 

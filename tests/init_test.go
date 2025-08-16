@@ -29,7 +29,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/params"
 )
 
 var (

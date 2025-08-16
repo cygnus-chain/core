@@ -21,15 +21,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/light"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/metrics"
+	"github.com/cygnus-chain/core/p2p"
+	"github.com/cygnus-chain/core/p2p/enode"
+	"github.com/cygnus-chain/core/p2p/enr"
+	"github.com/cygnus-chain/core/trie"
 )
 
 const (

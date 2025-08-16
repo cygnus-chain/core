@@ -23,16 +23,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/hexutil"
+	"github.com/cygnus-chain/core/consensus"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/core/state"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/eth/downloader"
+	"github.com/cygnus-chain/core/event"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/params"
 )
 
 // Backend wraps all methods required for mining. Only full node is capable

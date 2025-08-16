@@ -21,9 +21,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/crypto"
+	"github.com/cygnus-chain/core/ethdb/memorydb"
 )
 
 func TestStackTrieInsertAndHash(t *testing.T) {

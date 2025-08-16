@@ -21,12 +21,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/beacon"
-	"github.com/ethereum/go-ethereum/les"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core/beacon"
+	"github.com/cygnus-chain/core/les"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/node"
+	"github.com/cygnus-chain/core/rpc"
 )
 
 // Register adds catalyst APIs to the light client.

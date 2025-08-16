@@ -19,11 +19,11 @@ package core
 import (
 	"sync/atomic"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/consensus"
+	"github.com/cygnus-chain/core/core/state"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/core/vm"
+	"github.com/cygnus-chain/core/params"
 )
 
 // statePrefetcher is a basic Prefetcher, which blindly executes a block on top

@@ -20,9 +20,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core"
+	"github.com/cygnus-chain/core/event"
+	"github.com/cygnus-chain/core/rpc"
 )
 
 // DownloaderAPI provides an API which gives information about the current synchronisation status.

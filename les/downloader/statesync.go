@@ -21,12 +21,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core/state"
+	"github.com/cygnus-chain/core/crypto"
+	"github.com/cygnus-chain/core/ethdb"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/trie"
 	"golang.org/x/crypto/sha3"
 )
 

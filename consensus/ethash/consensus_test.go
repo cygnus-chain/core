@@ -25,10 +25,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/math"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/params"
 )
 
 type diffTest struct {

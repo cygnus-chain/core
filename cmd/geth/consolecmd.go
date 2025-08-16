@@ -20,11 +20,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/console"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core/cmd/utils"
+	"github.com/cygnus-chain/core/console"
+	"github.com/cygnus-chain/core/internal/flags"
+	"github.com/cygnus-chain/core/node"
+	"github.com/cygnus-chain/core/rpc"
 	"github.com/urfave/cli/v2"
 )
 

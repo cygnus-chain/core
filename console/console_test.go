@@ -25,15 +25,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/ethash"
-	"github.com/ethereum/go-ethereum/console/prompt"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/internal/jsre"
-	"github.com/ethereum/go-ethereum/miner"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/consensus/ethash"
+	"github.com/cygnus-chain/core/console/prompt"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/eth"
+	"github.com/cygnus-chain/core/eth/ethconfig"
+	"github.com/cygnus-chain/core/internal/jsre"
+	"github.com/cygnus-chain/core/miner"
+	"github.com/cygnus-chain/core/node"
 )
 
 const (

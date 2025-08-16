@@ -19,11 +19,11 @@ package core
 import (
 	"fmt"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/cygnus-chain/core/consensus"
+	"github.com/cygnus-chain/core/core/state"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/params"
+	"github.com/cygnus-chain/core/trie"
 )
 
 // BlockValidator is responsible for validating block headers, uncles and

@@ -25,15 +25,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/prque"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/prque"
+	"github.com/cygnus-chain/core/consensus/misc"
+	"github.com/cygnus-chain/core/core/state"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/event"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/metrics"
+	"github.com/cygnus-chain/core/params"
 )
 
 const (

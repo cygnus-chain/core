@@ -20,11 +20,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/math"
+	"github.com/cygnus-chain/core/consensus/ethash"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/params"
 )
 
 //go:generate go run github.com/fjl/gencodec -type DifficultyTest -field-override difficultyTestMarshaling -out gen_difficultytest.go

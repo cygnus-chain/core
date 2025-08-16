@@ -24,14 +24,14 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/tests"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/hexutil"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/params"
+	"github.com/cygnus-chain/core/rlp"
+	"github.com/cygnus-chain/core/tests"
 	"github.com/urfave/cli/v2"
 )
 

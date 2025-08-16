@@ -23,9 +23,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/ethash"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/cmd/utils"
+	"github.com/cygnus-chain/core/consensus/ethash"
+	"github.com/cygnus-chain/core/params"
 	"github.com/urfave/cli/v2"
 )
 

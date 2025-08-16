@@ -25,9 +25,9 @@ import (
 	"io"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/ethdb"
+	"github.com/cygnus-chain/core/log"
 )
 
 var ErrCommitDisabled = errors.New("no database for committing")

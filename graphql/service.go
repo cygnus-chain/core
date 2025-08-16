@@ -20,9 +20,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/cygnus-chain/core/eth/filters"
+	"github.com/cygnus-chain/core/internal/ethapi"
+	"github.com/cygnus-chain/core/node"
 	"github.com/graph-gophers/graphql-go"
 )
 

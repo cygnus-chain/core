@@ -19,8 +19,8 @@ package core
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/state"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core/state"
 )
 
 // txNoncer is a tiny virtual state database to manage the executable nonces of

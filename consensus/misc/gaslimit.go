@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/params"
 )
 
 // VerifyGaslimit verifies the header gas limit according increase/decrease

@@ -24,16 +24,16 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/core/forkid"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/protocols/eth"
-	"github.com/ethereum/go-ethereum/les/downloader"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/mclock"
+	"github.com/cygnus-chain/core/core/forkid"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/eth/protocols/eth"
+	"github.com/cygnus-chain/core/les/downloader"
+	"github.com/cygnus-chain/core/light"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/p2p"
+	"github.com/cygnus-chain/core/params"
 )
 
 // clientHandler is responsible for receiving and processing all incoming server

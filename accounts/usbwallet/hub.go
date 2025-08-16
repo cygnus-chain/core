@@ -23,9 +23,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/cygnus-chain/core/accounts"
+	"github.com/cygnus-chain/core/event"
+	"github.com/cygnus-chain/core/log"
 	"github.com/karalabe/usb"
 )
 

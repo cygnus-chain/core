@@ -28,13 +28,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/consensus"
+	"github.com/cygnus-chain/core/consensus/ethash"
+	"github.com/cygnus-chain/core/core/rawdb"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/core/vm"
+	"github.com/cygnus-chain/core/ethdb"
+	"github.com/cygnus-chain/core/params"
 )
 
 // snapshotTestBasic wraps the common testing fields in the snapshot tests.

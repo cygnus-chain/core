@@ -39,23 +39,23 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/ethstats"
-	"github.com/ethereum/go-ethereum/les"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/accounts"
+	"github.com/cygnus-chain/core/accounts/keystore"
+	"github.com/cygnus-chain/core/cmd/utils"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/eth/downloader"
+	"github.com/cygnus-chain/core/eth/ethconfig"
+	"github.com/cygnus-chain/core/ethclient"
+	"github.com/cygnus-chain/core/ethstats"
+	"github.com/cygnus-chain/core/les"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/node"
+	"github.com/cygnus-chain/core/p2p"
+	"github.com/cygnus-chain/core/p2p/enode"
+	"github.com/cygnus-chain/core/p2p/nat"
+	"github.com/cygnus-chain/core/params"
 	"github.com/gorilla/websocket"
 )
 
@@ -466,7 +466,7 @@ func (f *faucet) apiHandler(w http.ResponseWriter, r *http.Request) {
 			id = username
 		default:
 			//lint:ignore ST1005 This error is to be displayed in the browser
-			err = errors.New("Something funky happened, please open an issue at https://github.com/ethereum/go-ethereum/issues")
+			err = errors.New("Something funky happened, please open an issue at https://github.com/cygnus-chain/core/issues")
 		}
 		if err != nil {
 			if err = sendError(wsconn, err); err != nil {

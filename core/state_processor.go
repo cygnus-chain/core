@@ -20,14 +20,14 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/consensus"
+	"github.com/cygnus-chain/core/consensus/misc"
+	"github.com/cygnus-chain/core/core/state"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/core/vm"
+	"github.com/cygnus-chain/core/crypto"
+	"github.com/cygnus-chain/core/params"
 )
 
 // StateProcessor is a basic Processor, which takes care of transitioning

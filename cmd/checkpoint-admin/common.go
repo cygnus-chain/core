@@ -19,15 +19,15 @@ package main
 import (
 	"strconv"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/accounts/external"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/checkpointoracle"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core/accounts"
+	"github.com/cygnus-chain/core/accounts/abi/bind"
+	"github.com/cygnus-chain/core/accounts/external"
+	"github.com/cygnus-chain/core/cmd/utils"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/contracts/checkpointoracle"
+	"github.com/cygnus-chain/core/ethclient"
+	"github.com/cygnus-chain/core/params"
+	"github.com/cygnus-chain/core/rpc"
 	"github.com/urfave/cli/v2"
 )
 

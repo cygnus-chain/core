@@ -26,17 +26,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/bloombits"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/consensus/ethash"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/core/bloombits"
+	"github.com/cygnus-chain/core/core/rawdb"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/ethdb"
+	"github.com/cygnus-chain/core/event"
+	"github.com/cygnus-chain/core/params"
+	"github.com/cygnus-chain/core/rpc"
 )
 
 type testBackend struct {

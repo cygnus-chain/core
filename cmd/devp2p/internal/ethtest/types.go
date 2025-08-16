@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/eth/protocols/eth"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/rlpx"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/cygnus-chain/core/eth/protocols/eth"
+	"github.com/cygnus-chain/core/p2p"
+	"github.com/cygnus-chain/core/p2p/rlpx"
+	"github.com/cygnus-chain/core/rlp"
 )
 
 type Message interface {

@@ -25,12 +25,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/forkid"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/core/forkid"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/params"
+	"github.com/cygnus-chain/core/rlp"
 )
 
 type Chain struct {

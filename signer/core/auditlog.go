@@ -20,11 +20,11 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/signer/core/apitypes"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/hexutil"
+	"github.com/cygnus-chain/core/internal/ethapi"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/signer/core/apitypes"
 )
 
 type AuditLogger struct {

@@ -29,8 +29,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/rpc"
 	"github.com/rs/cors"
 )
 

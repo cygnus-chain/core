@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/params"
 	"github.com/holiman/uint256"
 )
 

@@ -24,17 +24,17 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/les/flowcontrol"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/mclock"
+	"github.com/cygnus-chain/core/core/rawdb"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/crypto"
+	"github.com/cygnus-chain/core/les/flowcontrol"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/p2p"
+	"github.com/cygnus-chain/core/p2p/enode"
+	"github.com/cygnus-chain/core/params"
+	"github.com/cygnus-chain/core/rlp"
 )
 
 // requestBenchmark is an interface for different randomized request generators

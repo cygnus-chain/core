@@ -26,11 +26,11 @@ import (
 	"sort"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/consensus/misc"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/rpc"
 )
 
 var (

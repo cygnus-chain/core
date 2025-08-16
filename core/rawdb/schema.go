@@ -21,8 +21,8 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/metrics"
 )
 
 // The fields below define the low level database schema prefixing.

@@ -19,7 +19,7 @@ package tests
 import (
 	"testing"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/params"
 )
 
 func TestTransaction(t *testing.T) {

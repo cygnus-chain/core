@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/params"
 	"github.com/urfave/cli/v2"
 )
 

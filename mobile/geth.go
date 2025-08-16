@@ -24,17 +24,17 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/ethstats"
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/les"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/eth/downloader"
+	"github.com/cygnus-chain/core/eth/ethconfig"
+	"github.com/cygnus-chain/core/ethclient"
+	"github.com/cygnus-chain/core/ethstats"
+	"github.com/cygnus-chain/core/internal/debug"
+	"github.com/cygnus-chain/core/les"
+	"github.com/cygnus-chain/core/node"
+	"github.com/cygnus-chain/core/p2p"
+	"github.com/cygnus-chain/core/p2p/nat"
+	"github.com/cygnus-chain/core/params"
 )
 
 // NodeConfig represents the collection of configuration values to fine tune the Geth

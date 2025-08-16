@@ -24,12 +24,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/event"
+	"github.com/cygnus-chain/core"
+	"github.com/cygnus-chain/core/accounts/abi"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/crypto"
+	"github.com/cygnus-chain/core/event"
 )
 
 // SignerFn is a signer function callback when a contract requires a method to

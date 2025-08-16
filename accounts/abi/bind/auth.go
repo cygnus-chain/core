@@ -23,13 +23,13 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/external"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/cygnus-chain/core/accounts"
+	"github.com/cygnus-chain/core/accounts/external"
+	"github.com/cygnus-chain/core/accounts/keystore"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/crypto"
+	"github.com/cygnus-chain/core/log"
 )
 
 // ErrNoChainID is returned whenever the user failed to specify a chain id.

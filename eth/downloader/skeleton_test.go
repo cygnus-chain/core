@@ -25,11 +25,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/protocols/eth"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/core/rawdb"
+	"github.com/cygnus-chain/core/core/types"
+	"github.com/cygnus-chain/core/eth/protocols/eth"
+	"github.com/cygnus-chain/core/log"
 )
 
 // hookedBackfiller is a tester backfiller with all interface methods mocked and

@@ -25,10 +25,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/core/forkid"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/cygnus-chain/core/core/forkid"
+	"github.com/cygnus-chain/core/p2p/enr"
+	"github.com/cygnus-chain/core/params"
+	"github.com/cygnus-chain/core/rlp"
 	"github.com/urfave/cli/v2"
 )
 

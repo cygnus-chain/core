@@ -20,10 +20,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/consensus/ethash"
+	"github.com/cygnus-chain/core/core/rawdb"
+	"github.com/cygnus-chain/core/core/vm"
+	"github.com/cygnus-chain/core/params"
 )
 
 // Tests that DAO-fork enabled clients can properly filter out fork-commencing

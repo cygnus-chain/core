@@ -20,11 +20,11 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/ethdb"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/params"
+	"github.com/cygnus-chain/core/rlp"
 )
 
 // ReadDatabaseVersion retrieves the version number of the database.

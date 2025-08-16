@@ -22,11 +22,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/eth/tracers/logger"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/tests"
+	"github.com/cygnus-chain/core/core/state"
+	"github.com/cygnus-chain/core/core/vm"
+	"github.com/cygnus-chain/core/eth/tracers/logger"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/tests"
 
 	"github.com/urfave/cli/v2"
 )

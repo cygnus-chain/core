@@ -21,11 +21,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/internal/utesting"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/cygnus-chain/core/eth"
+	"github.com/cygnus-chain/core/eth/ethconfig"
+	"github.com/cygnus-chain/core/internal/utesting"
+	"github.com/cygnus-chain/core/node"
+	"github.com/cygnus-chain/core/p2p"
 )
 
 var (

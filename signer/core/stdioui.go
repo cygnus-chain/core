@@ -19,9 +19,9 @@ package core
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core/internal/ethapi"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/rpc"
 )
 
 type StdIOUI struct {

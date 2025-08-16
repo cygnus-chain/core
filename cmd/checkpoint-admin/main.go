@@ -22,9 +22,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/common/fdlimit"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/cygnus-chain/core/common/fdlimit"
+	"github.com/cygnus-chain/core/internal/flags"
+	"github.com/cygnus-chain/core/log"
 	"github.com/urfave/cli/v2"
 )
 

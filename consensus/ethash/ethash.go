@@ -34,10 +34,10 @@ import (
 	"unsafe"
 
 	"github.com/edsrzf/mmap-go"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core/consensus"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/metrics"
+	"github.com/cygnus-chain/core/rpc"
 	"github.com/hashicorp/golang-lru/simplelru"
 )
 

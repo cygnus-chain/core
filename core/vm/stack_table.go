@@ -17,7 +17,7 @@
 package vm
 
 import (
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/params"
 )
 
 func minSwapStack(n int) int {

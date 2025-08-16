@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/crypto"
 )
 
 type Error struct {

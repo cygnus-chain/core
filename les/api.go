@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	vfs "github.com/ethereum/go-ethereum/les/vflux/server"
-	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/cygnus-chain/core/common/hexutil"
+	"github.com/cygnus-chain/core/common/mclock"
+	vfs "github.com/cygnus-chain/core/les/vflux/server"
+	"github.com/cygnus-chain/core/p2p/enode"
 )
 
 var (

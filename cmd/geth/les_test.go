@@ -27,8 +27,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/cygnus-chain/core/p2p"
+	"github.com/cygnus-chain/core/rpc"
 )
 
 type gethrpc struct {

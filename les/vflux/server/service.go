@@ -22,11 +22,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/les/utils"
-	"github.com/ethereum/go-ethereum/les/vflux"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/cygnus-chain/core/les/utils"
+	"github.com/cygnus-chain/core/les/vflux"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/p2p/enode"
+	"github.com/cygnus-chain/core/rlp"
 )
 
 type (

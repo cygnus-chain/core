@@ -29,10 +29,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/console/prompt"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/console/prompt"
+	"github.com/cygnus-chain/core/core"
+	"github.com/cygnus-chain/core/log"
 	"github.com/peterh/liner"
 	"golang.org/x/term"
 )

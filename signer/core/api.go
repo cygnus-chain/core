@@ -25,17 +25,17 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/accounts/scwallet"
-	"github.com/ethereum/go-ethereum/accounts/usbwallet"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/ethereum/go-ethereum/signer/storage"
+	"github.com/cygnus-chain/core/accounts"
+	"github.com/cygnus-chain/core/accounts/keystore"
+	"github.com/cygnus-chain/core/accounts/scwallet"
+	"github.com/cygnus-chain/core/accounts/usbwallet"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/common/hexutil"
+	"github.com/cygnus-chain/core/internal/ethapi"
+	"github.com/cygnus-chain/core/log"
+	"github.com/cygnus-chain/core/rpc"
+	"github.com/cygnus-chain/core/signer/core/apitypes"
+	"github.com/cygnus-chain/core/signer/storage"
 )
 
 const (

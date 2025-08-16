@@ -22,13 +22,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/cmd/devp2p/internal/v4test"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/cmd/devp2p/internal/v4test"
+	"github.com/cygnus-chain/core/common"
+	"github.com/cygnus-chain/core/crypto"
+	"github.com/cygnus-chain/core/internal/flags"
+	"github.com/cygnus-chain/core/p2p/discover"
+	"github.com/cygnus-chain/core/p2p/enode"
+	"github.com/cygnus-chain/core/params"
 	"github.com/urfave/cli/v2"
 )
 

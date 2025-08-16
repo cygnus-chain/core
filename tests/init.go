@@ -21,7 +21,7 @@ import (
 	"math/big"
 	"sort"
 
-	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
+	"github.com/cygnus-chain/core/params"
 )
 
 // Forks table defines supported forks and their chain config.

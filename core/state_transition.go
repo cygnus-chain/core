@@ -26,7 +26,7 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
 )
 
 var emptyCodeHash = crypto.Keccak256Hash(nil)

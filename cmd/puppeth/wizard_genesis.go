@@ -31,7 +31,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
 )
 
 // makeGenesis creates a new genesis struct based on some user input.

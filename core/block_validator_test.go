@@ -24,15 +24,15 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/beacon"
-	"github.com/ethereum/go-ethereum/consensus/clique"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
+	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus"
+	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/beacon"
+	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/clique"
+	"github.com/CryptoDevelopmentServices/Go-Cygnus/consensus/ethash"
 	"github.com/ethereum/go-ethereum/core/rawdb"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/CryptoDevelopmentServices/Go-Cygnus/params"
 )
 
 // Tests that simple header verification works, for both good and bad blocks.

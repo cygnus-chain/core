@@ -101,6 +101,23 @@ var (
 		Threshold: 2,
 	}
 
+	// CygnusChainConfig defines the chain parameters for the Cygnus network.
+	var CygnusChainConfig = &ChainConfig{
+		ChainID:             big.NewInt(235), // unique ID for Cygnus
+		HomesteadBlock:      big.NewInt(0),
+		EIP150Block:         big.NewInt(0),
+		EIP155Block:         big.NewInt(0),
+		EIP158Block:         big.NewInt(0),
+		ByzantiumBlock:      big.NewInt(0),
+		ConstantinopleBlock: big.NewInt(0),
+		PetersburgBlock:     big.NewInt(0),
+		IstanbulBlock:       big.NewInt(0),
+		MuirGlacierBlock:    big.NewInt(0),
+		BerlinBlock:         big.NewInt(0),
+		LondonBlock:         big.NewInt(0),
+	}
+
+
 	// RopstenChainConfig contains the chain parameters to run a node on the Ropsten test network.
 	RopstenChainConfig = &ChainConfig{
 		ChainID:                       big.NewInt(3),
@@ -289,6 +306,7 @@ var NetworkNames = map[string]string{
 	RinkebyChainConfig.ChainID.String(): "rinkeby",
 	GoerliChainConfig.ChainID.String():  "goerli",
 	SepoliaChainConfig.ChainID.String(): "sepolia",
+	CygnusChainConfig.ChainID.String():  "cygnus",
 }
 
 // TrustedCheckpoint represents a set of post-processed trie roots (CHT and

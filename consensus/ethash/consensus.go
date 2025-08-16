@@ -79,6 +79,37 @@ var (
 	calcDifficultyByzantium = makeDifficultyCalculator(big.NewInt(3000000))
 )
 
+// calcCygnusReward returns the Cygnus block reward based on height
+func calcCygnusReward(number *big.Int) *big.Int {
+    reward := new(big.Float)
+    block := number.Uint64()
+
+    if block < 55000 {
+        reward.SetFloat64(2.0) // pre-activation reward
+    } else {
+        // Halving every 50k after block 55k
+        halvings := (block - 55000) / 50000
+        switch halvings {
+        case 0:
+            reward.SetFloat64(1.0)
+        case 1:
+            reward.SetFloat64(0.5)
+        case 2:
+            reward.SetFloat64(0.25)
+        case 3:
+            reward.SetFloat64(0.125)
+        default:
+            reward.SetFloat64(0.06) // permanent tail emission
+        }
+    }
+
+    wei := new(big.Float).Mul(reward, big.NewFloat(1e18))
+    out := new(big.Int)
+    wei.Int(out)
+    return out
+}
+
+
 // Various error messages to mark blocks invalid. These should be private to
 // prevent engine specific errors from being referenced in the remainder of the
 // codebase, inherently breaking if the engine is swapped out. Please put common
@@ -650,26 +681,32 @@ var (
 // reward. The total reward consists of the static block reward and rewards for
 // included uncles. The coinbase of each uncle block is also rewarded.
 func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header *types.Header, uncles []*types.Header) {
-	// Select the correct block reward based on chain progression
-	blockReward := FrontierBlockReward
-	if config.IsByzantium(header.Number) {
-		blockReward = ByzantiumBlockReward
-	}
-	if config.IsConstantinople(header.Number) {
-		blockReward = ConstantinopleBlockReward
-	}
-	// Accumulate the rewards for the miner and any included uncles
-	reward := new(big.Int).Set(blockReward)
-	r := new(big.Int)
-	for _, uncle := range uncles {
-		r.Add(uncle.Number, big8)
-		r.Sub(r, header.Number)
-		r.Mul(r, blockReward)
-		r.Div(r, big8)
-		state.AddBalance(uncle.Coinbase, r)
+    var blockReward *big.Int
+    if config == params.CygnusChainConfig {
+        blockReward = calcCygnusReward(header.Number)
+    } else {
+        blockReward = FrontierBlockReward
+        if config.IsByzantium(header.Number) {
+            blockReward = ByzantiumBlockReward
+        }
+        if config.IsConstantinople(header.Number) {
+            blockReward = ConstantinopleBlockReward
+        }
+    }
 
-		r.Div(blockReward, big32)
-		reward.Add(reward, r)
-	}
-	state.AddBalance(header.Coinbase, reward)
+    // Accumulate the rewards for the miner and any included uncles
+    reward := new(big.Int).Set(blockReward)
+    r := new(big.Int)
+    for _, uncle := range uncles {
+        r.Add(uncle.Number, big8)
+        r.Sub(r, header.Number)
+        r.Mul(r, blockReward)
+        r.Div(r, big8)
+        state.AddBalance(uncle.Coinbase, r)
+
+        r.Div(blockReward, big32)
+        reward.Add(reward, r)
+    }
+    state.AddBalance(header.Coinbase, reward)
 }
+

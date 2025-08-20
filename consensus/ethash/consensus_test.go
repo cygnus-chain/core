@@ -107,7 +107,6 @@ func TestDifficultyCalculators(t *testing.T) {
 		if diffBig.Cmp(params.MinimumDifficulty) < 0 {
 			diffBig.Set(params.MinimumDifficulty)
 		}
-		//rand.Read(difficulty)
 		header := &types.Header{
 			Difficulty: diffBig,
 			Number:     new(big.Int).SetUint64(rand.Uint64() % 50_000_000),
@@ -185,4 +184,34 @@ func BenchmarkDifficultyCalculator(b *testing.B) {
 			x2(1000014, h)
 		}
 	})
+}
+
+// ---------------- Cygnus Reward Halving Tests ----------------
+
+// helper to convert int -> wei (big.Int)
+func eth(n int64) *big.Int {
+	return new(big.Int).Mul(big.NewInt(n), big.NewInt(1e18))
+}
+
+// Test the Cygnus block reward schedule at key heights
+func TestCygnusHalvingSchedule(t *testing.T) {
+	tests := []struct {
+		block  uint64
+		reward *big.Int
+	}{
+		{99999, eth(2)},                                   // before halving
+		{100000, eth(1)},                                  // halved
+		{150000, new(big.Int).Div(eth(1), big.NewInt(2))}, // 0.5
+		{200000, new(big.Int).Div(eth(1), big.NewInt(4))}, // 0.25
+		{250000, new(big.Int).Div(eth(1), big.NewInt(8))}, // 0.125
+		{300000, new(big.Int).Div(new(big.Int).Mul(big.NewInt(6), big.NewInt(1e18)), big.NewInt(100))}, // 0.06
+		{400000, new(big.Int).Div(new(big.Int).Mul(big.NewInt(6), big.NewInt(1e18)), big.NewInt(100))}, // stays 0.06
+	}
+
+	for _, tt := range tests {
+		got := calcCygnusReward(new(big.Int).SetUint64(tt.block))
+		if got.Cmp(tt.reward) != 0 {
+			t.Errorf("block %d: expected %s, got %s", tt.block, tt.reward.String(), got.String())
+		}
+	}
 }

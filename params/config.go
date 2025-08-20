@@ -113,8 +113,8 @@ var (
 		PetersburgBlock:     big.NewInt(0),
 		IstanbulBlock:       big.NewInt(0),
 		MuirGlacierBlock:    big.NewInt(0),
-		BerlinBlock:         big.NewInt(0),
-		LondonBlock:         big.NewInt(0),
+		BerlinBlock:         big.NewInt(100000),
+        LondonBlock:         big.NewInt(100000),
 	}
 
 
@@ -563,6 +563,10 @@ func (c *ChainConfig) IsBerlin(num *big.Int) bool {
 // IsLondon returns whether num is either equal to the London fork block or greater.
 func (c *ChainConfig) IsLondon(num *big.Int) bool {
 	return isForked(c.LondonBlock, num)
+}
+
+func (c *ChainConfig) IsCygnus() bool {
+    return c != nil && c.ChainID != nil && c.ChainID.Cmp(big.NewInt(235)) == 0
 }
 
 // IsArrowGlacier returns whether num is either equal to the Arrow Glacier (EIP-4345) fork block or greater.

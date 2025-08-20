@@ -24,7 +24,6 @@ import (
 	"runtime"
 	"time"
 
-	mapset "github.com/deckarep/golang-set"
 	"github.com/cygnus-chain/core/common"
 	"github.com/cygnus-chain/core/common/math"
 	"github.com/cygnus-chain/core/consensus"
@@ -34,6 +33,7 @@ import (
 	"github.com/cygnus-chain/core/params"
 	"github.com/cygnus-chain/core/rlp"
 	"github.com/cygnus-chain/core/trie"
+	mapset "github.com/deckarep/golang-set"
 	"golang.org/x/crypto/sha3"
 )
 
@@ -81,34 +81,30 @@ var (
 
 // calcCygnusReward returns the Cygnus block reward based on height
 func calcCygnusReward(number *big.Int) *big.Int {
-    reward := new(big.Float)
-    block := number.Uint64()
+	block := number.Uint64()
+	ether := big.NewInt(1e18)
 
-    if block < 55000 {
-        reward.SetFloat64(2.0) // pre-activation reward
-    } else {
-        // Halving every 50k after block 55k
-        halvings := (block - 55000) / 50000
-        switch halvings {
-        case 0:
-            reward.SetFloat64(1.0)
-        case 1:
-            reward.SetFloat64(0.5)
-        case 2:
-            reward.SetFloat64(0.25)
-        case 3:
-            reward.SetFloat64(0.125)
-        default:
-            reward.SetFloat64(0.06) // permanent tail emission
-        }
-    }
-
-    wei := new(big.Float).Mul(reward, big.NewFloat(1e18))
-    out := new(big.Int)
-    wei.Int(out)
-    return out
+	switch {
+	case block < 100000:
+		// 2.0
+		return new(big.Int).Mul(big.NewInt(2), ether)
+	case block < 150000:
+		// 1.0
+		return new(big.Int).Mul(big.NewInt(1), ether)
+	case block < 200000:
+		// 0.5
+		return new(big.Int).Div(ether, big.NewInt(2))
+	case block < 250000:
+		// 0.25
+		return new(big.Int).Div(ether, big.NewInt(4))
+	case block < 300000:
+		// 0.125
+		return new(big.Int).Div(ether, big.NewInt(8))
+	default:
+		// 0.06 (6/100)
+		return new(big.Int).Div(new(big.Int).Mul(big.NewInt(6), ether), big.NewInt(100))
+	}
 }
-
 
 // Various error messages to mark blocks invalid. These should be private to
 // prevent engine specific errors from being referenced in the remainder of the
@@ -630,7 +626,7 @@ func (ethash *Ethash) Prepare(chain consensus.ChainHeaderReader, header *types.H
 // setting the final state on the header
 func (ethash *Ethash) Finalize(chain consensus.ChainHeaderReader, header *types.Header, state *state.StateDB, txs []*types.Transaction, uncles []*types.Header) {
 	// Accumulate any block and uncle rewards and commit the final state root
-	accumulateRewards(chain.Config(), state, header, uncles)
+	AccumulateRewards(chain.Config(), state, header, uncles)
 	header.Root = state.IntermediateRoot(chain.Config().IsEIP158(header.Number))
 }
 
@@ -680,33 +676,28 @@ var (
 // AccumulateRewards credits the coinbase of the given block with the mining
 // reward. The total reward consists of the static block reward and rewards for
 // included uncles. The coinbase of each uncle block is also rewarded.
-func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header *types.Header, uncles []*types.Header) {
-    var blockReward *big.Int
-    if config == params.CygnusChainConfig {
-        blockReward = calcCygnusReward(header.Number)
-    } else {
-        blockReward = FrontierBlockReward
-        if config.IsByzantium(header.Number) {
-            blockReward = ByzantiumBlockReward
-        }
-        if config.IsConstantinople(header.Number) {
-            blockReward = ConstantinopleBlockReward
-        }
-    }
+// AccumulateRewards credits the coinbase with the appropriate mining rewards.
+func AccumulateRewards(config *params.ChainConfig, state *state.StateDB, header *types.Header, uncles []*types.Header) {
+	var blockReward *big.Int
 
-    // Accumulate the rewards for the miner and any included uncles
-    reward := new(big.Int).Set(blockReward)
-    r := new(big.Int)
-    for _, uncle := range uncles {
-        r.Add(uncle.Number, big8)
-        r.Sub(r, header.Number)
-        r.Mul(r, blockReward)
-        r.Div(r, big8)
-        state.AddBalance(uncle.Coinbase, r)
+	// Use Cygnus reward schedule if this is Cygnus chain
+	if config != nil && config.ChainID != nil && config.ChainID.Cmp(big.NewInt(235)) == 0 {
+		blockReward = calcCygnusReward(header.Number)
+	} else if config.IsConstantinople(header.Number) {
+		blockReward = ConstantinopleBlockReward
+	} else if config.IsByzantium(header.Number) {
+		blockReward = ByzantiumBlockReward
+	} else {
+		blockReward = FrontierBlockReward
+	}
 
-        r.Div(blockReward, big32)
-        reward.Add(reward, r)
-    }
-    state.AddBalance(header.Coinbase, reward)
+	// Reward miner
+	state.AddBalance(header.Coinbase, blockReward)
+
+	// Reward uncles
+	r := new(big.Int).Div(blockReward, big.NewInt(32))
+	for _, uncle := range uncles {
+		reward := new(big.Int).Mul(r, big.NewInt(8+int64(uncle.Number.Uint64()-header.Number.Uint64())))
+		state.AddBalance(uncle.Coinbase, reward)
+	}
 }
-
